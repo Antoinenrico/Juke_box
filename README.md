@@ -1,5 +1,13 @@
 # Juke_box
 
+### Storage
+
+You have to follow this organisation :
+static : scriptrico.js
+templates : - indexrico.html
+            - indexparametre.html
+main file : all others
+
 ### The web interface
 
 You’ll need to generate and activate a python3 virtual environment:  
@@ -26,3 +34,9 @@ Now you can finally launch the webserver:
 
 To view the webpage in your browser, open http://127.0.0.1:5000 in your web
 browser.
+
+### Start with
+
+you have two option :
+python3 cinq.py => you will acces to physical code
+python3 webserverrico.py => this will generate web interface and if you click on init you will start few Gcode
