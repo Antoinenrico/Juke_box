@@ -3,9 +3,12 @@
 ### Storage
 
 You have to follow this organisation :
+
 static : scriptrico.js
+
 templates : - indexrico.html
             - indexparametre.html
+            
 main file : all others
 
 ### The web interface
