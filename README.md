@@ -41,5 +41,7 @@ browser.
 ### Start with
 
 you have two option :
+
 python3 cinq.py => you will acces to physical code
+
 python3 webserverrico.py => this will generate web interface and if you click on init you will start few Gcode
