@@ -23,9 +23,11 @@ def serve_parametres():
 
 @app.route('/api', methods=['POST'])
 def serve_api():
-    print("hello", request.form["sens"])
     if request.form["sens"] == "init":
-        port_anet = find_anet()
+        try:
+            port_anet = find_anet()
+        except IOError:
+            return make_response("Jukebox non trouvé!", 500) # erreur 500 = erreur interne du serveur
         print(port_anet)
         path = '/home/pi/Juke_box/Gcode/'
         device = Serial(port=port_anet, baudrate=115200)
@@ -50,6 +52,7 @@ def serve_api():
 
     if request.form["sens"] in ["gauche", "droite", "bas", "haut"]:
         print(request.form["sens"])
+        return make_response(request.form["sens"], 501) # Erreur 501 = non implémenté
 
 
 

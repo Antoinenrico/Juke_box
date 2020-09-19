@@ -9,10 +9,10 @@ function send_Gcode_to_motor(sens) {
         req.onreadystatechange = function () {
             if (this.readyState == 4 && this.status == 200) {
                 //  Si succès, écrire le status + le message reçu sur la page
-                zone_text.innerText += this.status + " - " + this.responsesend_Gcode_to_motorText + "\n"
+                zone_text.innerText += this.status + " - " + this.responseText + "\n"
             } else if (this.readyState == 4) {
                 //  Si erreur, écrire l'erreur sur la page
-                zone_text.innerText += this.status + " - Error" + "\n"
+                zone_text.innerText += this.status + " - Erreur: " + this.responseText + "\n"
             }
         }
         req.open('POST', '/api', true);
