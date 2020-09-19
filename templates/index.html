@@ -1,19 +1,39 @@
 <!DOCTYPE html>
 
 <html>
-
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
+    <link rel="stylesheet" href="/static/stylesheet.css">
 <head>
 </head>
 
-<body>
-    <nav>
-        <a href="/parametres">Paramètres</a>
-    </nav>
+<body class="container">
     <script type="text/javascript" src="static/scriptrico.js"></script> <!-- rico script -->
-    <button type="button" onclick="send_Gcode_to_motor('gauche')">Gauche</button>
-    <button type="button" onclick="send_Gcode_to_motor('init')">Init</button>
-    <!--<a href="indexparametres.html">Paramètres-->
-    <p id="msg"></p>
+    <header>
+        <nav class="container">
+            <h1 class="title">Jukebox</h1>
+            <ul class="navigation float-right">
+                <li>
+                    <a href="/">Accueil</a>
+                </li>
+                <li>
+                    <a href="/parametres">Paramètres</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="action-buttons">
+            <h3>Actions:</h3>
+            <button type="button" onclick="send_Gcode_to_motor('gauche')">Gauche</button>
+            <button type="button" onclick="send_Gcode_to_motor('init')">Init</button>
+        </section>
+        <section class="server-responses">
+            <h3>Réponses du serveur:</h3>
+            <pre id="msg"></pre>
+        </section>
+    </main>
 </body>
 
 </html>
